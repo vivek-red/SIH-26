@@ -1,0 +1,11 @@
+openmeteo-requests
+requests-cache
+retry-requests
+pandas
+numpy
+xgboost
+scikit-learn
+pythermalcomfort
+streamlit
+folium
+streamlit-folium

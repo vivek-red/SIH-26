@@ -34,17 +34,81 @@ microclimate_system/
 
 ## How to Run
 
-1. **Install Dependencies:**
+### Windows Guide
+
+**Prerequisites:** Ensure [Python 3.8+](https://www.python.org/downloads/windows/) is installed and added to your system's PATH.
+
+1. **Open Command Prompt or PowerShell:**
+   Navigate to the project folder.
+   ```powershell
+   cd path\to\microclimate_system
+   ```
+
+2. **Create and Activate a Virtual Environment:**
+   ```powershell
+   python -m venv venv
+   .\venv\Scripts\activate
+   ```
+   *(Note: If you encounter an Execution Policy error in PowerShell, run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` first.)*
+
+3. **Install Dependencies:**
+   ```powershell
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Data Pipeline (Optional):**
+   To fetch fresh data and retrain the model:
+   ```powershell
+   python main.py
+   ```
+
+5. **Run the Application:**
+   ```powershell
+   python -m streamlit run app.py
+   ```
+
+6. **Deactivate:**
+   When done, exit the environment:
+   ```powershell
+   deactivate
+   ```
+
+---
+
+### Linux/macOS Guide
+
+**Prerequisites:** Ensure Python 3.8+ is installed (`python3 --version`).
+
+1. **Open Terminal:**
+   Navigate to the project folder.
+   ```bash
+   cd path/to/microclimate_system
+   ```
+
+2. **Create and Activate a Virtual Environment:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Run the Data Pipeline (Optional, to retrain model or fetch fresh data):**
+4. **Run the Data Pipeline (Optional):**
+   To fetch fresh data and retrain the model:
    ```bash
    python main.py
    ```
 
-3. **Run the Application:**
+5. **Run the Application:**
    ```bash
    streamlit run app.py
+   ```
+
+6. **Deactivate:**
+   When done, exit the environment:
+   ```bash
+   deactivate
    ```
